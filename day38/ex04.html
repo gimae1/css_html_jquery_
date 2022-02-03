@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+     <link rel="stylesheet" type="text/css" href="test04.css">
+     <!-- 먼저 css 불러 온 후에 style 태그 이용해서 부가적인 사항 바꿀수 잇다.  -->
+    <style rel="stylesheet" type="text/css">
+        h2{
+            color:blue;
+        }
+        /* p{color:lightblue;} */
+        #p3{color:brown;}
+        .p4{color:darkblue}
+        /* 
+        선택자{속성:값;속성:값;} 문법 잘 지키기! 
+        tag selector
+        선택자-> 태그 요소들의 각 element 
+        속성은 asist 기능 통해 제공이 된다. 값들은 속성에 따라 정해져 있다. 
+        원하는 element 선택이 가장 중요하다. 
+        css 는 연산 안됨
+        */
+        /*  tag selector    tag
+            id selector     #id id 는 한 문서에서 하나만 가능
+            class selector  .class
+            동일한 우선순위를 갖는 것은 마지막으로 적용한 스타일이 적용된다. 
+            우선순위
+            inline >id > class > tag
+            inline 은 우선순위 너무 높기 때문에 되도록이면 쓰지 않는다 (id나 class도 사용안함)
+            */
+            
+        /* h3{
+            color:darkcyan;
+        } */
+        /* 스타일 태그에 명세하면 제어 간단해진다 */
+    </style>
+   
+    <!-- 확장자가 css ,link 라는 태그 사용 하고 css 파일 내부는 스타일 태그 내부처럼 정의 할 수 있다.  -->
+</head>
+<body>
+    <!-- 인라인 방식은 그 엘리먼트만 적용되는 반면 ↑ -->
+        <h1 style="color: red;">대제목</h1>
+        <p>설명</p>
+        <h2>css</h2>
+        <p class="p2">style을 설정합니다</p>
+        <h3>방식1</h3>
+        <p id="p3">inline방식</p>
+        <h3>방식2</h3>
+        <P class="p2 p4">sytle 에 명세</P>
+        <h3>방식3</h3>
+        <p class="p4">외부파일로 명세</p>
+</body>
+</body>
+</html>

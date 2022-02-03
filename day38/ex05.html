@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+    
+    <head>
+        <meta charset="utf-8">
+        <style rel="stylesheet" type="text/css">
+            /* ul>li:nth-child(2n){
+                color:red;
+            }    */
+            /* h1 다음에 등장하는 p태그들 
+                ~ next siblings
+                + 다음 형제요소들
+                > 자식 element로의 접근
+                , 다중선택
+                space bar 자손요소
+                :last-child 마지막 자손
+                :first-child 첫번째 자손
+                :nth-child() 조건에 해당하는 자손요소
+            */
+            /* table에서 가장 많이 사용한다.
+                thead와 tbody 명세하는것이 오류 막을 수 있다. 
+                tbody 명시하면 tr이 tbody의 자손이 됨으로 정상적으로 2n 을 표시해준다. 
+                */
+            
+            tr:nth-child(2n)>td{
+                color:darkkhaki;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>태그선택자를 이용한</h1>
+        <h2>제어</h2>
+        <p>p1</p>
+        <p>p2</p>
+        <h2>제어</h2>
+        <p>p3</p>
+        <p>p4</p>
+        <ul>
+            <li>item1<a href="#">link</a></li>
+            <li>item2<a href="#">link</a></li>
+            <li>item3<a href="#">link</a></li>
+            <li>item4<a href="#">link</a></li>
+        </ul>
+        <ol>
+            <li>item1<a href="#">link</a></li>
+            <li>item2<a href="#">link</a></li>
+            <li>item3<a href="#">link</a></li>
+            <li>item4<a href="#">link</a></li>
+
+        </ol>
+        <table>
+            <tr>
+                <th>col1</th>
+                <th>col2</th>
+                <th>col3</th>
+            </tr>
+            <tbody>
+                <tr>
+                    <td>item1</td>
+                    <td>item1</td>
+                    <td>item1</td>
+                </tr>
+                <tr>
+                    <td>item2</td>
+                    <td>item2</td>
+                    <td>item2</td>
+                </tr>
+                <tr>
+                    <td>item3</td>
+                    <td>item3</td>
+                    <td>item3</td>
+                </tr>
+                <tr>
+                    <td>item4</td>
+                    <td>item4</td>
+                    <td>item4</td>
+                </tr>
+                <tr>
+                    <td>item5</td>
+                    <td>item5</td>
+                    <td>item5</td>
+                </tr>
+                <tr>
+                    <td>item6</td>
+                    <td>item6</td>
+                    <td>item6</td>
+                </tr>
+            </tbody>
+        </table>
+    </body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <style rel="stylesheet" type="text/css">
+           [type='submit']{
+                color:darkorange;   
+            }
+
+            /* 
+            tag[type="name"] 속성 선택자 
+            [type="name"] 타입만 같은것도 select 할 수 있다. 
+            */
+        </style>
+    </head>
+    <body>
+        <form action="ex01.html">
+            <input type="number" value="10"><br/> <!-- 브라우저마다, 기기마다 형식 다르다.  -->
+            <input type="tel" ><br/> <!-- android 폼에서는 모두 작동한다.모바일 아닐시에 문자열검사 자동으로 해준다.(주소 형식에 맞지 않거나 이메일 형식 아닐때도) -->
+            <input type="url"><br/> 
+            <input type="email"><br/>
+            <input type="color"><br/>  
+            <input type="date"><br/>
+            <input type="datetime"><br/>
+            <input type="time"><br/>
+            <input type="range" min="1" max="100">
+
+            <input type="submit" value="전송1">
+            <input type="button" value="버튼1">
+            <button>전송3</button>
+
+            <button type="submit">전송2</button>
+            <!-- 버튼1은 타입이 버튼임으로 아무런 정보 전송하지 않음으로 버튼 눌러도 action 하지 않음
+            폼태그 안쪽의 버튼은 type을 지정해주지 않으면 submit으로  action 반응 한다. -->
+
+        </form>
+        <button>버튼2</button>
+    </body>
+</html>
