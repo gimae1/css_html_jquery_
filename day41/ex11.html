@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <script type="text/javascript">
+            //object
+            var a=new Object();
+            a.prop1='p1';
+            console.log(typeof a);
+            console.log(a.prop1);
+            console.log(a);
+
+            var obj2={"key1":"val1","key2":"val2"}
+            console.log(obj2.key1);
+            console.log(obj2.key2);
+            console.log(obj2);
+
+            var c={1.1:'val1',true:1234,'key3':3.14,false:true};
+            // c.null=false;
+            c[null]=false;//위와 아래는 같은 뜻
+            c[1.1]='val1.1';
+            c['key33']=4.14;
+            console.log(typeof c);
+            console.log(c);
+        </script>
+    </head>
+    <body>
+
+    </body>
+</html>

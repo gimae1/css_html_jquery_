@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <script type="text/javascript">
+            //함수=overload 개념 없음
+
+            //f01(); 대입 이전에는 undefined 이므로 오류. 대입이 아직 이루어지지 않았다.
+            func01();//컴파일 하는 과정에서 함수는 미리 올려놓기 때문에 가능
+
+            f01=function(){console.log('첫번째');};
+            f01=function(){console.log('두번째');};
+
+            function func01(){console.log('첫번째')}
+            function func01(){console.log('두번째')}
+
+            func01();
+
+        </script>
+    </head>
+    <body>
+
+    </body>
+</html>
