@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <style rel="stylesheet" type="text/css">
+            input[title~=c]{color:red;}
+            a[href$=".com"]{color:aqua;}
+            div>label:first-child{color:blueviolet;} /*div의 첫번째 자식이 label 일때*/
+            input[readonly=readonly]{color:darkgreen;}
+            a:visited{color:darkmagenta;}
+            a:link{color:darkorange;}
+           
+            a:hover{color:dimgrey;}
+            a:active{color:deeppink;}
+        </style>
+    </head>
+    <body>
+        <h1>회원가입</h1>
+        <form>
+            <div>
+                <label title="ab1">id</label><input type="text" value="admin" readonly="readonly"/>
+            </div>
+            <div>
+                <label title="bc2">pw</label><input type="password" value="1234"/>
+            </div>
+            <div>
+                <label title="cd1">name</label><input type="text" value="홍길동"/>
+            </div>
+            <div>
+                <label title="ef2">age</label><input type="number" value="20"/>
+            </div>
+            <div>
+                <input type="submit" value="가입"/>
+                <input type="reset" value="취소"/>
+            </div>
+        </form>
+        <p><a href="#">회원가입</a></p>
+        <p><a href="https://www.naver.com/">네이버</a></p>
+        <p><a href="https://www.daum.net">다음</a></p>
+        <p><a href="https://www.google.com">구글</a></p>
+    </body>
+</html>

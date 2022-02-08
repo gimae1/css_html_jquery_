@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <style>
+            span{
+                background-color: chocolate;
+                width: 200px;
+                height: 100px;
+                display:inline-block;
+                /* size 의 기준은 content에 맞춰서 ! inline 속성은 content사이즈에 맞추게 되어 설정이 되지 않는다.  */
+            }
+            /* 디스플레이 방식 변경할 수 있다. inline-block, inline,block*/
+            p{
+                background-color: olive;
+                width: 200px;
+                /* display:inline; */
+                margin-bottom:0px; /*p 간의 이격(간격) 을 margin 이라고 함*/
+                margin-top:0px;
+                margin-left:0px;
+                margin-right:0px;
+                /* margin:0px;-> 네 방향을 한번에 줌 
+                    margin:0px 0px 0px 0px; 같은 형식도 가능하다. (top right bottom left)*/
+            }
+            
+            h1,h2{
+                width:200px;
+                /* background-color: rgb(212, 209, 203); */
+                /* border-width:1px; width 는 브라우저가 지원하는 기능이므로 안될수 있다. */
+                border-color:lightsalmon;
+                border-style:double;
+                border: 1px lightsalmon dashed; /*한번에 설정할수도 있다.*/ 
+            }
+            h2{
+                padding: 10px;/*padding 이나 border 같은 element 는 content의 밖으로 커진다.*/
+
+            }
+            body{
+                margin:0px;
+                /* background-color: #fff000; rgb(255,255,255) 도 가능 */
+                        }
+            /*body도 마진을 가지고 있다.
+            그냥 color 를 정하면 기본은 text로 들어가므로 body 안의 text element 들로 간다.   */
+            /* css의 시작은 
+                *{
+                    margin:0px;
+                    padding:0px; 
+                }
+                로 모두 0으로 한 후에 재정의 한다. 
+            */
+        </style>
+    </head>
+    <body>
+        <h1>대제목</h1>
+        <h2>소제목</h2>
+        <p>내용1</p>
+        <p>내용2</p>
+        <p>내용3</p>
+        <div>div1</div>
+        <div>div2</div>
+        <div>div3</div>
+        <span>span1</span>
+        <span>span2</span>
+        <span>span3</span><a href="#">link</a>
+    </body>
+</html>

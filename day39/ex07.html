@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <style rel="stylesheet" type="text/css">
+           #header>h1{
+               text-indent:-999999px;
+               background-color: rgb(223, 216 , 240);
+               background-image: url("img01.png");
+               background-repeat: no-repeat;
+               background-position: center;
+               background-size: 600px 200px;
+               height: 100px;
+           }
+                #menu{
+                    background-color: rgb(200, 175, 224);
+                    height:40px;
+                }
+                #menu>ul{
+                    list-style: none;
+                    padding:0px;
+                    width:400px;    
+                    margin:0px auto;
+                    margin-left:auto;
+                    margin-right:auto;
+                }
+                #menu>ul>li{
+                    float:left;
+                    margin: 0px auto;
+                }
+                #menu>ul>li>a{
+                    text-decoration: none;
+                    text-align: center;
+                    width:100px;
+                    height:40px;
+                    line-height:40px;
+                    background-color: lavender;
+                    display:block;
+                    text-transform: uppercase;
+                }
+                #menu>ul>li>a:hover{
+                    background-color: rgb(200, 175, 224);
+                }
+                /* #menu>ul>li>a{
+                    background-color: seashell;
+                } */
+                #content{
+                    clear:both;
+                    height:300px;
+                    background-color:rgb(223, 216 , 240);
+                    width:70%;
+                }
+                .article{
+                    width:30%;
+                    height: 100px;
+                    background-color: rgb(223, 216, 240);
+                }
+                #content,.article{
+                    float:left;
+                }
+                #footer{
+                    clear:both;
+                }
+
+        </style>
+    </head>
+    <body>
+        <div id="header">
+
+        <h1>하이미디어</h1>
+        </div>
+        <div id="menu">
+            <ul>
+                <li><a href="#">menu1</a></li>
+                <li><a href="#">menu2</a></li>
+                <li><a href="#">menu3</a></li>
+                <li><a href="#">menu4</a></li>
+            </ul>
+        </div>
+        <div id="content">section</div>
+        <div id="article">aside1</div>
+        <div id="footer">footer</div>
+    </body>
+</html>
