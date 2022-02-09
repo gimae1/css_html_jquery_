@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <script type="text/javascript">
+            // function func01(a){
+            //     console.log(typeof a);
+            //     a();
+            // }
+
+            // var func02=function (){
+            //     console.log('실행');
+            // }
+            // func01(func02);/*--> func01 호출 안에 func02 호출 존재 출력 순서-> 
+            // typeof a -> a() 호출== func01(func02) -> console 실행 출력 
+            // call back 함수 라고 함*/
+
+            function func01(a){
+             if(typeof a=='function'){  
+                a();
+               }  else{
+                    console.log(a)
+                }
+            }
+
+
+
+        </script>
+    </head>
+    <body>
+
+    </body>
+</html>

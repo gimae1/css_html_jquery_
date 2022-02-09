@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <script type="text/javascript">
+            var a=1111;//a와 b 는 동일한 과정
+            window.b=2222;
+            console.log(this.a,this.b);
+            function func01(){
+                console.log(this);
+            }
+            func01();
+            var c=function(){console.log(this);};
+            // console.log(c); 그냥 c를 호출하면 this는 window 지만 (window 객체 안에 func01 이 존재하기 때문에 this==window)
+            var obj={'key1':'val1','func02':c};
+            obj.func02();//객체 안에서의 this는 객체의 this 이므로 자기자신 즉 object 가 됨.
+            var obj={
+                'key1':'val1',
+                'func02':c,
+                'func03':function(){console.log(this);},
+                'func04':function(){return this.key1;},//getter
+                'func05':function(a){this.key1=a;}//setter
+            };
+            obj.func05('value');
+            var d=obj.func04();
+            console.log(d);
+        </script>
+    </head>
+    <body>
+
+    </body>
+</html>
