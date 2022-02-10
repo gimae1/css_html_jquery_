@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+    </head>
+    <body>
+        <h1>node 제어</h1>
+        <ol>
+            <li>원하는 엘리먼트에 접근</li>
+            <li>엘리먼트의 특성 파악</li>
+            <li>엘리먼트 생성</li>
+            <li>엘리먼트 삭제</li>
+        </ol>
+        <input type="text"/>
+        <button onclick="add();">추가</button>
+
+        <script type="text/javascript">
+            var input,ol,msg,li;
+            input=document.getElementsByTagName('input')[0];
+               ol=document.getElementsByTagName('ol')[0];
+           
+           function add(){
+            // // var ol=document.childNodes[1].childNodes[2].childNodes[3];
+         
+            // ol=document.children[0].children[1].children[1];
+            // input=document.children[0].children[1].children[2];;
+            // //  msg=document.createTextNode('추가');
+            // msg=document.createTextNode(input.value);
+            // li=document.createElement('li');
+            // li.appendChild(msg);
+            // ol.appendChild(li);
+            // input.value='';
+           
+           
+            msg=input.value;
+            if(msg.length){
+            li=document.createElement('li');
+            li.appendChild(document.createTextNode(msg));
+            ol.appendChild(li);
+            input.value='';
+            }
+        }
+        </script>
+
+    </body>
+</html>
