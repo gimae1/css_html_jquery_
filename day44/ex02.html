@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <script type="text/javascript">
+            window.onload=function(){
+                console.log(document.querySelector('h1'));
+                var btn=document.querySelector('button');
+                btn.onclick=function(){
+                    alert('버튼클릭')
+                }
+
+            };//javascript 가 이벤트 시점에 알아서 함수 호출한다. 
+
+
+            // function callback(){
+            //     console.log(document.querySelector('h1'));
+            // }
+            // window.onload=callback;
+            //엘리먼트 잡고 호출
+        </script>
+    </head>
+    <body>
+        <h1>DOM level2 event</h1>
+        <button>btn</button>
+    </body>
+</html>

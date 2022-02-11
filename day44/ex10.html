@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <style rel="stylesheet" type="text/css">
+            div{
+                width:100px;
+                height:100px;
+                background-color: yellow;
+            }
+        </style>
+        <script type="text/javascript">
+            var div;
+            var callback1=function(){
+                div.innerHTML+='click<br/>';
+            };
+            var callback2=function(){
+                div.innerHTML+='over<br/>';
+            };
+            var callback3=function(){
+                div.innerHTML+='out<br/>';
+            };
+            window.onload=function(){
+                div=document.querySelector('div');
+                div.addEventListener('click',callback1);
+                div.addEventListener('click',callback2);
+                div.addEventListener('click',callback3);// 이런 식으로 클릭 하나에 여러가지 이벤트를 붙일 수 있고,
+                div.removeEventListener('click',callback3);//제거 할 수 도 있다. 
+
+                // div.addEventListener('mouseover',callback2);
+                // div.addEventListener('mouseout',callback3);
+            };
+        </script>
+    </head>
+    <body>
+        <h1>mouse event</h1>
+        <div></div>
+    </body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <script type="text/javascript">
+            var a;
+            window.onload=function(){
+                a=document.querySelector('a');
+                // a.onclick=function(){
+                //     console.log('엥커취소');
+                //     return false;
+                // };
+                a.addEventListener('click',function(e){
+                    e.preventDefault();//엘리먼트 기본기능 취소 해야지 level3에서의 취소 가능하다.//이때는 조건 추가하지 못한다. 
+                    console.log('엥커취소');//level 3는 return false 로 이벤트 취소 어렵다.
+                });
+            };
+        </script>
+    </head>
+    <body>
+        <h1>DOM level3 event 주의사항</h1>
+        <a href="https://m.naver.com">naver</a>
+    </body>
+</html>

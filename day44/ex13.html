@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <style rel="stylesheet" type="text/css">
+            div{
+                background-color: yellow;
+                width: 300px;
+                height: 200px;
+            }
+            p{
+                background-color: blue;
+                width: 200px;
+                height: 100px;
+            }
+            span{
+                background-color: red;
+                width: 100px;
+                height: 50px;
+            }
+        </style>
+        <script type="text/javascript">
+            var div,p,span;
+            window.onload=function(){
+                div=document.querySelector('div');
+                p=document.querySelector('p');
+                span=document.querySelector('span');
+
+                div.addEventListener('click',function(e){
+                    // e.stopPropagation();
+                    console.log('div');
+                },true);
+                p.addEventListener('click',function(e){
+                    e.stopPropagation();
+                    console.log('p');
+                },true);
+                span.addEventListener('click',function(e){//나로부터 부모에게로 이벤트 전파가 일어난다. 
+                    e.stopPropagation();//이벤트 전파 막아준다. 함수의 최상단에 위치해야 기능을 할 수 있다. 
+                    console.log('span');
+                },true);//DOM level3 에서 마지막 인자로 true 를 주면 거꾸로 부모에게서 나에게로 전파 일어나게 된다. 
+            };
+        </script>
+    </head>
+    <body>
+        <div>
+            ~~
+            <p>이벤트 전파를 통해<span>버블링과 켑쳐링</span>이 일어난다 </p>
+            ~~
+        </div>
+    </body>
+</html>

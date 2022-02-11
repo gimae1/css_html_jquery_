@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <script type="text/javascript">
+var form,input,ch1,ch2,ch3,select,btn,alink,div;
+window.onload=function(){
+    select=document.querySelector('select');
+    input=document.querySelector('input[type="text"]');
+    form=document.querySelector('form');
+    btn=document.querySelector('button');
+    alink=document.querySelector('div>a');
+    div=document.querySelector('#result');
+    ch1=document.querySelectorAll('input[type="checkbox"]')[1];
+    ch1.onchange=function(){
+    // input.onchange=function(){
+    // select.onchange=function(){
+        console.log(this,this.value);
+        div.innerText=this.value;
+    };
+    alink.onclick=function(){
+        // console.log(this);
+        // return false;
+        this.href='https://google.com';
+    };
+    btn.onclick=function(){return false;};
+    console.log(input);
+    form.onsubmit=function(){
+        console.log('btn click');
+        if(input.value=='')return false;
+        return true;
+    };
+    
+
+};            
+        </script>
+    </head>
+    <body>
+        <h1>etc event</h1>
+        <form>
+            <div>id <input type="text" name="id"/></div>
+            <div>
+                <input type="checkbox" name="ch1"/>item1
+                <input type="checkbox" name="ch2"/>item1
+                <input type="checkbox" name="ch3"/>item1
+            </div>
+            <div>
+                <select name="sel">
+                    <option>item1</option>
+                    <option>item2</option>
+                    <option>item3</option>
+                    <option>item4</option>
+                </select>
+            </div>
+            <button type="submit">전송</button>
+        </form>
+        <div>
+            link:<a href="https://m.naver.com">link</a>
+        </div>
+        <div id="result"></div>
+    </body>
+</html>
