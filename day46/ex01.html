@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="utf-8">
+        <style rel="stylesheet" type="text/css">
+            h1{color:yellowgreen;}
+        </style>
+
+        <script type="text/javascript" src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+        <script type="text/javascript">
+            window.onload=function(){
+                // $('h2+p').css('color','red');
+                // $('ul').css('color','yellow');
+                // $('li>a').css('color','green');
+                // $('p').last().css('color','red');
+                // $('h1,h2').css('color','red');
+                // $('li:eq(3)').css('color','red');
+                // $('li:even').css('color','red');
+                // $('li:odd').css('color','red');
+                // $('li:lt(3)').css('color','red');
+                // $('li:gt(2)').css('color','red');
+                // $('li:not(#id4)').css('color','red');
+                // $('body>*:not(p)').css('color','red');
+                // $('li:has(a)').css('color','red');//링크를 가진 li만 고름
+                // $('li:empty').css('color','red');//비어있는 선택자만
+                $("li:contains('item2')").css('css','red');
+            };
+        </script>
+    </head>
+    <body>
+        <h1>jquery</h1>
+        <p>제이쿼리 불러오기</p>
+        <h2>소제목1</h2>
+        <p>내용 1</p>
+        <h2>소제목2</h2>
+        <p>내용 2</p>
+        <h2>소제목3</h2>
+        <p>내용 3</p>
+        <ul>
+            <li>item1-<a href="#">link</a></li>
+            <li>item2-<a href="#">link</a></li>
+            <li>item3-</li>
+            <li id="id4">item4-<a href="#">link</a></li>
+            <li></li>
+            <li>item6-<a href="#">link</a></li>
+        </ul>
+    </body>
+</html>

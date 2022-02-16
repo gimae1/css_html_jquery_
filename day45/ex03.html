@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <script type="text/javascript">
+            var div,xhr;
+            window.onload=function(){
+                
+                xhr=new XMLHttpRequest();
+                // xhr.onreadystatechange=function(data){
+                //     console.log(xhr.respone);
+                // };
+                xhr.onreadystatechange=function(){
+                    div.innerHTML=xhr.responseText;
+              
+                xhr.open('get','ex01.html');
+                xhr.send();
+            };
+  };
+        </script>
+    </head>
+    <body>
+        <h1>ex03.page</h1>
+        <div></div>
+    </body>
+</html>
