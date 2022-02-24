@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style rel="stylesheet" type="text/css">
+        div{
+            width: 100px;
+            height: 100px;
+            background-color: yellow;
+        }
+    </style>
+    <script type="text/javascript" src="js/jquery-1.12.4.js"></script>
+    <script type="text/javascript">
+        $(function(){
+            var callback=()=>{
+            $('div').animate({//camellcase 사용해야 한다
+                marginLeft: '400px'
+                //backgroundColor:'red' backgroundcolor는 안됨.
+                //animate 사용시에 명령이동시에 진행되기때문에 순서를 주려면 명령을 다시 해야한다
+            },1000)
+            .animate({marginTop:'400px'},3000)
+            .animate({marginLeft:'0px'},1000)
+            .animate({marginTop:'0px'},1000)//자바스크립트는 single thread 를 가지고 작업을 한다. 따라서 
+            //콜백함수를 이용하여 쓰레드를 나누어 일을 수행하는것처럼 보이게 한다. 
+            //단일스레드를 이용하여 멀티작업을 수행하는 격.
+                }
+                $('button')
+                    .first()
+                        .click(callback)
+                    .next()
+                        .click(()=>{
+                            // while($('div').queue().length) $('div').stop();
+                            //$('div').clearQueue().stop();
+                            // $('div').stop().clearQueue();
+                            // $('div').finish();
+                    })
+//dequeue!!!!
+        });
+        console.log('js main end');
+    </script>
+</head>
+<body>
+    <h1>애니메이션3</h1>
+    <button>start</button>
+    <button>stop</button>
+    <div></div>
+    
+</body>
+</html>
