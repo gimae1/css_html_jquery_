@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script type="text/javascript" src="js/jquery-1.12.4.js"></script>
+    <script type="text/javascript">
+        $(function(){
+            $('button').click(function(e){
+                $('div').append('x:'+e.pageX+',y:'+e.pageY+'<br/>');
+            });
+            // $('button').mouseover(function(){
+            //     console.log('over');
+            // });
+            // $('button').mouseout(function(){
+            //     console.log('out');
+            // });
+            //--------------------------------------------------------------
+            // $('button').mouseenter(function(){//자식 요소로의 이벤트 전파 막음
+            //     console.log('mouse over2');
+            // });
+            // $('button').mouseleave(function(){
+            //     console.log('mouse out2');
+            // });
+            $('div').dblclick(function(e){
+                $('div').append('double<br/>');
+            });
+            $('button').mouseup(function(e){
+                $('div').append('마우스 버튼 up<br/>');
+            });
+            $('button').mousedown(function(e){
+                $('div').append('마우스 버튼 down<br/>');
+            });
+        });
+    </script>
+
+</head>
+<body>
+    <h1>마우스 이벤트</h1>
+    <button>btn</button>
+    <div></div>
+</body>
+</html>

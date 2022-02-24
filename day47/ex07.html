@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script type="text/javascript" src="js/jquery-1.12.4.js"></script>
+    <script type="text/javascript">
+        $(function(){
+            $('form').submit(function(e){
+                e.preventDefault();
+                console.log('기본기능취소');
+
+                return false;
+//DOM level3이지만 level 2 처럼 리턴을 false 처리 하는것만으로도 취소시킬 수 있다
+            });
+            $('input').focusout(function(){
+                $(this).next().remove();
+                if($(this).val().length<4)
+                $('<span>4자리이상</span>')
+                        .css('color','red')
+                        .insertAfter(this);
+                else $(this).next().remove();
+            });
+            //-----------------------------------------------------
+            // $('select').change(function(){
+            //     console.log('select 선택',$('select').val);
+            // });
+            // $(':button').click(function(){
+            //     history.back();
+            // });
+            // $('input').eq(0).focusin(function(){
+            //     console.log(this);
+            //     var val=$(this).val();
+            //     if(val==='id입력') $('input').eq(0).val('');
+            // });
+            // // $('input').eq(1).focusout(function(){
+            // //     if($(this).val().length<4)alert('4자이상');
+            // // });
+            // $('input').focusout(function(e){
+            //     console.log(this,e.target);
+            //     if($(this).val().length<4)alert('4자이상');
+            // });
+        });
+//    form>(div>label+input[type=text])*2+(div>select>option*4)+(div>button*2)
+    </script>
+</head>
+<body>
+    <h1>회원가입</h1>
+    <form action="ex08.html">
+        <div><label for="id">id</label><input type="text" id="id" value="id입력"></div>
+        <div><label for="pw">pw</label><input type="password" id="pw"></div>
+        <div>
+            <select name="sel" >
+                <option value="it1">item1</option>
+                <option value="it2">item2</option>
+                <option value="it3">item3</option>
+                <option value="it4">item4</option>
+            </select>
+        </div>
+        <div><button type="submit">전송</button>
+            <button type="reset">취소</button>
+            <button type="button">뒤로</button>
+        </div>
+    </form>
+</body>
+</html>

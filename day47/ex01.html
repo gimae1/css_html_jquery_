@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <title>Document</title>
+    <script type="text/javascript" src="js/jquery-1.12.4.js"></script>
+    <script type="text/javascript">
+        var arr=[
+            'imgs/thumb01.jfif',
+            'imgs/thumb02.jfif',
+            'imgs/thumb03.jfif',
+            'imgs/thumb04.jfif',
+            'imgs/thumb05.jfif',
+            'imgs/thumb06.jfif'
+        ];
+        // var arr2=[];
+        // $(function(){
+        //     $(arr).each(function(idx,ele){
+        //         $('<img/>').attr('src',ele).appendTo('.rolling');  
+        //     });
+        //     $('.rolling img').each(function(idx,ele){
+        //         arr2.push(ele);
+        //     });
+
+            
+        // });
+
+        function callback(){
+            $('.rolling').html('<img src="'+arr[0]+'"/>');
+            arr.push(arr.shift());
+            // $('.rolling').html(arr2[1]);
+        }
+
+
+    </script>
+</head>
+<body>
+    <div class="rolling">
+      <!-- <ul>
+          <li><img src="imgs/thumb01.jfif" alt=""></li>
+          <li><img src="imgs/thumb02.jfif" alt=""></li>
+          <li><img src="imgs/thumb03.jfif" alt=""></li>
+          <li><img src="imgs/thumb04.jfif" alt=""></li>
+          <li><img src="imgs/thumb05.jfif" alt=""></li>
+          <li><img src="imgs/thumb06.jfif" alt=""></li>
+      </ul> -->
+
+    </div>    
+</body>
+</html>

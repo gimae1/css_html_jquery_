@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style rel="stylesheet" type="text/css">
+        .carousel{
+            display:none;
+        }
+    </style>
+    <script type="text/javascript" src="js/jquery-1.12.4.js"></script>
+    <script type="text/javascript">
+         var before1;
+$(function(){
+    // $('.carousel li').first().insertBefore('.carousel');
+    var callback=function(){
+   if(before1) $('.carousel').append(before1);
+    before1=$('.carousel li').first();
+    before1.insertBefore('.carousel');
+    }
+    setInterval(callback,1000);
+});
+    </script>
+</head>
+<body>
+    <div>
+        <ul class="carousel">
+            <li><img src="imgs/thumb01.jfif" alt=""></li>
+            <li><img src="imgs/thumb02.jfif" alt=""></li>
+            <li><img src="imgs/thumb03.jfif" alt=""></li>
+            <li><img src="imgs/thumb04.jfif" alt=""></li>
+            <li><img src="imgs/thumb05.jfif" alt=""></li>
+            <li><img src="imgs/thumb06.jfif" alt=""></li>
+        </ul>
+    </div>
+</body>
+</html>

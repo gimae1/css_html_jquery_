@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script type="text/javascript" src="js/jquery-1.12.4.js"></script>
+    <script typ="text/javascript">
+        $(function(){
+            consloe.log($('input').first().val());
+            $('select').prop('disabled',false);
+        });
+
+
+    // form>(div>label+input)*2+(div>select>option)+div>button[type=submit]
+    </script>
+</head>
+<body>
+    <form>
+        <div><label >id</label><input type="text" value="asdf" readonly/></div>
+        <div><label >pw</label><input type="text" disabled/></div>
+        <div>
+            <select disabled="disabled">
+                <option>item1</option>
+                <option>item2</option>
+                <option>item3</option>
+                <option>item4</option>
+            </select>
+        </div>
+        <div><button type="submit">전송</button></div>
+    </form>
+   
+</body>
+</html>

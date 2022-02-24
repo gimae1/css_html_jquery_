@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script type="text/javascript" src="js/jquery-1.12.4.js"></script>
+    <script type="text/javascript">
+        var callback1=function(){
+            console.log('btn2 click');
+        };
+        var callback2=function(){
+            alert('btn2 click');
+        };
+        $(function(){
+            $('button').eq(0).click(function(){
+                console.log('btn1 click');
+            });
+            $('button').eq(0).click(function(){
+                alert('btn1 click');
+            });
+            $(document).on('click','a',callback1)
+                    .on('click','button:eq(1)',callback2)
+                    .on('mouseup mousedown','button:eq(1)',callback1)
+                    .off('mouseup','button:eq(1)',callback1);
+                });
+         
+    </script>
+</head>
+<body>
+    <a href="https://m.naver.com">link</a>
+    <h1>event like DOM3</h1>
+    <button>btn1</button>
+    <button>btn2</button>
+    <button>btn3</button>
+</body>
+</html>

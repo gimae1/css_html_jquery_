@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script type="text/javascript" src="js/jquery-1.12.4.js"></script>
+    <script type="text/javascript">
+        window.onload=function(){
+            console.log('js onload');
+        };
+        // $(document).onload(function(){
+        //     consloe.log('jq onload');
+        // });
+        $(document).ready(function(){//ready 와 onload 는 data  돔 제어가 가능한 시점의 차이가 있다. ready가 좀 더 빠르다.  
+            console.log('jq ready');
+            document.querySelector('img').onload=function(){
+                console.log('이미지 로딩 완료');
+            };
+        });
+        $(document).ready(function(){
+            console.log('jq ready2');
+        });
+        $(function(){//축약형.. 결국 function을 넣는다는것은 ready와 마찬가지 이다.
+            console.log('jqready3');
+        });
+
+    </script>
+</head>
+<body>
+    <h1>이벤트</h1>
+    <img src="imgs/thumb01.jfif"/>
+</body>
+</html>
